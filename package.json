@@ -1,0 +1,43 @@
+{
+  "name": "konductor-demo-express",
+  "version": "1.0.0",
+  "description": "An NodeJS Express based Konductor demo",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.adobe.com/fenachemihal/konductor-demo-express"
+  },
+  "keywords": [
+    "konductor",
+    "demo",
+    "express",
+    "node"
+  ],
+  "author": "Florin Mihalache",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "form-data": "^4.0.0",
+    "jsrsasign": "^10.4.1",
+    "jsrsasign-util": "^1.0.5",
+    "pug": "^3.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src/**/*"
+    ]
+  }
+}

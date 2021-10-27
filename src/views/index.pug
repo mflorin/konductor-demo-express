@@ -1,0 +1,573 @@
+doctype html
+head
+    // <script src="//assets.adobedtm.com/22bf1a13013f/86d7ecf581d6/launch-6c6d6e862560-development.min.js" async></script>
+    // <script src="http://assets.adobedtm.com/22bf1a13013f/cd1edaea93ba/launch-9a7c6f86a519-development.min.js" async></script>
+    // ====== Required meta tags ======
+    meta(charset='utf-8')
+
+    meta(http-equiv='x-ua-compatible' content='ie=edge')
+
+    meta(name='description' content='')
+
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+    // ====== Title ======
+    title Start | Landing Page for Startup and SaaS Business
+
+    // ====== Favicon Icon ======
+    link(rel='shortcut icon' href='assets/images/favicon.png' type='image/png')
+
+    // ====== Bootstrap css ======
+    link(rel='stylesheet' href='assets/css/bootstrap.min.css')
+
+    // ====== Line Icons css ======
+    link(rel='stylesheet' href='assets/css/LineIcons.css')
+
+    // ====== Magnific Popup css ======
+    link(rel='stylesheet' href='assets/css/magnific-popup.css')
+
+    // ====== Default css ======
+    link(rel='stylesheet' href='assets/css/default.css')
+
+    // ====== Style css ======
+    link(rel='stylesheet' href='assets/css/style.css')
+
+    script(src="https://cdn1.adoberesources.net/alloy/2.6.3/alloy.js" async)
+
+    script.
+        !function(n,o){
+            o.forEach(function (o) {
+                n[o] || ((n.__alloyNS = n.__alloyNS ||
+                    []).push(o), n[o] = function () {
+                    var u = arguments;
+                    return new Promise(
+                        function (i, l) {
+                            n[o].q.push([i, l, u])
+                        })
+                }, n[o].q = [])
+            })
+        }
+        (window,["alloy"]);
+
+    script.
+       // configuration
+       alloy('configure', {
+           edgeConfigId: '#{konductorConfig.dataStreamId}',
+           orgId: '#{konductorConfig.ims.config.imsOrg}',
+           debugEnabled: true,
+           thirdPartyCookiesEnabled: false
+       })
+
+// ====== HEADER PART START ======
+header.header-area
+    .navgition.navgition-transparent
+        .container
+            .row
+                .col-lg-12
+                    nav.navbar.navbar-expand-lg
+                        a.navbar-brand(href='#')
+                            img(src='assets/images/logo.svg' alt='Logo')
+                        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarOne' aria-controls='navbarOne' aria-expanded='false' aria-label='Toggle navigation')
+                            span.toggler-icon
+                            span.toggler-icon
+                            span.toggler-icon
+                        #navbarOne.collapse.navbar-collapse.sub-menu-bar
+                            ul.navbar-nav.m-auto
+                                li.nav-item.active
+                                    a.page-scroll(href='#home') HOME
+                                li.nav-item
+                                    a.page-scroll(href='#service') SERVICES
+                                li.nav-item
+                                    a.page-scroll(href='#pricing') PRICING
+                                li.nav-item
+                                    a.page-scroll(href='#contact') CONTACT
+                        .navbar-social.d-none.d-sm-flex.align-items-center
+                            span FOLLOW US
+                            ul
+                                li
+                                    a(href='#')
+                                        i.lni-facebook-filled
+                                li
+                                    a(href='#')
+                                        i.lni-twitter-original
+                                li
+                                    a(href='#')
+                                        i.lni-instagram-original
+                                li
+                                    a(href='#')
+                                        i.lni-linkedin-original
+                    // navbar
+            // row
+        // container
+    // navgition
+    #home.header-hero.bg_cover(style='background-image: url(assets/images/header-bg.jpg)')
+        .container
+            .row.justify-content-center
+                .col-xl-8.col-lg-10
+                    .header-content.text-center
+                        h3.header-title Handcrafted Landing Page for Startups and SaaS Businesses
+                        p.text
+                            | A simple, customizable, and, beautiful SaaS business focused landing page to
+                            | make your project closer to launch!
+                        ul.header-btn
+                            li
+                                a.main-btn.btn-one(href='#' onclick='sendGetInTouchEvent()') GET IN TOUCH
+                            li
+                                a.main-btn.btn-two.video-popup(href='https://www.youtube.com/watch?v=r44RKWyfcFw')
+                                    | WATCH THE VIDEO
+                                    i.lni-play
+                    // header content
+            // row
+        // container
+        .header-shape
+            img(src='assets/images/header-shape.svg' alt='shape')
+    // header content
+// ====== HEADER PART ENDS ======
+// ====== SERVICES PART START ======
+section#service.services-area
+    .container
+        .row
+            .col-lg-6
+                .section-title.pb-10
+                    h4.title Crafted For
+                    p.text
+                        | Stop wasting time and money designing and managing a website that doesn&rsquo;t get
+                        | results. Happiness guaranteed!
+                // section title
+        // row
+        .row
+            .col-lg-8
+                .row
+                    .col-md-6
+                        .services-content.mt-40.d-sm-flex
+                            .services-icon
+                                i.lni-bolt
+                            .services-content.media-body
+                                h4.services-title Startup
+                                p.text
+                                    | Short description for the ones
+                                    br
+                                    |  who look for something new.
+                        // services content
+                    .col-md-6
+                        .services-content.mt-40.d-sm-flex
+                            .services-icon
+                                i.lni-bar-chart
+                            .services-content.media-body
+                                h4.services-title SaaS Business
+                                p.text
+                                    | Short description for the ones
+                                    br
+                                    |  who look for something new.
+                        // services content
+                    .col-md-6
+                        .services-content.mt-40.d-sm-flex
+                            .services-icon
+                                i.lni-brush
+                            .services-content.media-body
+                                h4.services-title Agency
+                                p.text
+                                    | Short description for the ones
+                                    br
+                                    |  who look for something new.
+                        // services content
+                    .col-md-6
+                        .services-content.mt-40.d-sm-flex
+                            .services-icon
+                                i.lni-bulb
+                            .services-content.media-body
+                                h4.services-title App Landing
+                                p.text
+                                    | Short description for the ones
+                                    br
+                                    |  who look for something new.
+                        // services content
+                // row
+            // row
+        // row
+    // conteiner
+    .services-image.d-lg-flex.align-items-center
+        .image
+            img(src='assets/images/services.png' alt='Services')
+    // services image
+// ====== SERVICES PART ENDS ======
+// ====== PRICING PART START ======
+section#pricing.pricing-area
+    .container
+        .row.justify-content-center
+            .col-lg-6
+                .section-title.text-center.pb-10
+                    h4.title Our Pricing
+                    p.text
+                        | Stop wasting time and money designing and managing a website that doesn&rsquo;t get
+                        | results. Happiness guaranteed!
+                // section title
+        // row
+        .row.justify-content-center
+            .col-lg-4.col-md-7.col-sm-9
+                .single-pricing.mt-40
+                    .pricing-header.text-center
+                        h5.sub-title Basic
+                        span.price $ 199
+                        p.year per year
+                    .pricing-list
+                        ul
+                            li
+                                i.lni-check-mark-circle
+                                |  Carefully crafted components
+                            li
+                                i.lni-check-mark-circle
+                                |  Amazing page examples
+                            li
+                                i.lni-check-mark-circle
+                                |  Super friendly support team
+                            li
+                                i.lni-check-mark-circle
+                                |  Awesome Support
+                    .pricing-btn.text-center
+                        a.main-btn(href='#') GET STARTED
+                    .buttom-shape
+                        svg#Layer_1(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 350 112.35')
+                            defs
+                                style.
+                                    .color-1 {
+                                        fill: #2bdbdc;
+                                        isolation: isolate;
+                                    }
+                                    .cls-1 {
+                                        opacity: 0.1;
+                                    }
+                                    .cls-2 {
+                                        opacity: 0.2;
+                                    }
+                                    .cls-3 {
+                                        opacity: 0.4;
+                                    }
+                                    .cls-4 {
+                                        opacity: 0.6;
+                                    }
+                            title bottom-part1
+                            g#bottom-part
+                                g#Group_747(data-name='Group 747')
+                                    path#Path_294.cls-1.color-1(data-name='Path 294' d='M0,24.21c120-55.74,214.32,2.57,267,0S349.18,7.4,349.18,7.4V82.35H0Z' transform='translate(0 0)')
+                                    path#Path_297.cls-2.color-1(data-name='Path 297' d='M350,34.21c-120-55.74-214.32,2.57-267,0S.82,17.4.82,17.4V92.35H350Z' transform='translate(0 0)')
+                                    path#Path_296.cls-3.color-1(data-name='Path 296' d='M0,44.21c120-55.74,214.32,2.57,267,0S349.18,27.4,349.18,27.4v74.95H0Z' transform='translate(0 0)')
+                                    path#Path_295.cls-4.color-1(data-name='Path 295' d='M349.17,54.21c-120-55.74-214.32,2.57-267,0S0,37.4,0,37.4v74.95H349.17Z' transform='translate(0 0)')
+                // single pricing
+            .col-lg-4.col-md-7.col-sm-9
+                .single-pricing.pro.mt-40
+                    .pricing-baloon
+                        img(src='assets/images/baloon.svg' alt='baloon')
+                    .pricing-header
+                        h5.sub-title Pro
+                        span.price $ 399
+                        p.year per year
+                    .pricing-list
+                        ul
+                            li
+                                i.lni-check-mark-circle
+                                |  Carefully crafted components
+                            li
+                                i.lni-check-mark-circle
+                                |  Amazing page examples
+                            li
+                                i.lni-check-mark-circle
+                                |  Super friendly support team
+                            li
+                                i.lni-check-mark-circle
+                                |  Awesome Support
+                    .pricing-btn.text-center
+                        a.main-btn(href='#') GET STARTED
+                    .buttom-shape
+                        svg#Layer_1(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 350 112.35')
+                            defs
+                                style.
+                                    .color-2 {
+                                        fill: #0067f4;
+                                        isolation: isolate;
+                                    }
+                                    .cls-1 {
+                                        opacity: 0.1;
+                                    }
+                                    .cls-2 {
+                                        opacity: 0.2;
+                                    }
+                                    .cls-3 {
+                                        opacity: 0.4;
+                                    }
+                                    .cls-4 {
+                                        opacity: 0.6;
+                                    }
+                            title bottom-part1
+                            g#bottom-part
+                                g#Group_747(data-name='Group 747')
+                                    path#Path_294.cls-1.color-2(data-name='Path 294' d='M0,24.21c120-55.74,214.32,2.57,267,0S349.18,7.4,349.18,7.4V82.35H0Z' transform='translate(0 0)')
+                                    path#Path_297.cls-2.color-2(data-name='Path 297' d='M350,34.21c-120-55.74-214.32,2.57-267,0S.82,17.4.82,17.4V92.35H350Z' transform='translate(0 0)')
+                                    path#Path_296.cls-3.color-2(data-name='Path 296' d='M0,44.21c120-55.74,214.32,2.57,267,0S349.18,27.4,349.18,27.4v74.95H0Z' transform='translate(0 0)')
+                                    path#Path_295.cls-4.color-2(data-name='Path 295' d='M349.17,54.21c-120-55.74-214.32,2.57-267,0S0,37.4,0,37.4v74.95H349.17Z' transform='translate(0 0)')
+                // single pricing
+            .col-lg-4.col-md-7.col-sm-9
+                .single-pricing.enterprise.mt-40
+                    .pricing-flower
+                        img(src='assets/images/flower.svg' alt='flower')
+                    .pricing-header.text-right
+                        h5.sub-title Enterprise
+                        span.price $ 799
+                        p.year per year
+                    .pricing-list
+                        ul
+                            li
+                                i.lni-check-mark-circle
+                                |  Carefully crafted components
+                            li
+                                i.lni-check-mark-circle
+                                |  Amazing page examples
+                            li
+                                i.lni-check-mark-circle
+                                |  Super friendly support team
+                            li
+                                i.lni-check-mark-circle
+                                |  Awesome Support
+                    .pricing-btn.text-center
+                        a.main-btn(href='#') GET STARTED
+                    .buttom-shape
+                        svg#Layer_1(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 350 112.35')
+                            defs
+                                style.
+                                    .color-3 {
+                                        fill: #4da422;
+                                        isolation: isolate;
+                                    }
+                                    .cls-1 {
+                                        opacity: 0.1;
+                                    }
+                                    .cls-2 {
+                                        opacity: 0.2;
+                                    }
+                                    .cls-3 {
+                                        opacity: 0.4;
+                                    }
+                                    .cls-4 {
+                                        opacity: 0.6;
+                                    }
+                            title bottom-part1
+                            g#bottom-part
+                                g#Group_747(data-name='Group 747')
+                                    path#Path_294.cls-1.color-3(data-name='Path 294' d='M0,24.21c120-55.74,214.32,2.57,267,0S349.18,7.4,349.18,7.4V82.35H0Z' transform='translate(0 0)')
+                                    path#Path_297.cls-2.color-3(data-name='Path 297' d='M350,34.21c-120-55.74-214.32,2.57-267,0S.82,17.4.82,17.4V92.35H350Z' transform='translate(0 0)')
+                                    path#Path_296.cls-3.color-3(data-name='Path 296' d='M0,44.21c120-55.74,214.32,2.57,267,0S349.18,27.4,349.18,27.4v74.95H0Z' transform='translate(0 0)')
+                                    path#Path_295.cls-4.color-3(data-name='Path 295' d='M349.17,54.21c-120-55.74-214.32,2.57-267,0S0,37.4,0,37.4v74.95H349.17Z' transform='translate(0 0)')
+                // single pricing
+        // row
+    // conteiner
+// ====== PRICING PART ENDS ======
+// ====== CALL TO ACTION PART START ======
+section#call-to-action.call-to-action
+    .call-action-image
+        img(src='assets/images/call-to-action.png' alt='call-to-action')
+    .container-fluid
+        .row.justify-content-end
+            .col-lg-6
+                .call-action-content.text-center
+                    h2.call-title Curious to Learn More? Stay Tuned
+                    p.text
+                        | You let us know whenever you want us to update anything or think something can
+                        | be optimised.
+                    .call-newsletter
+                        i.lni-envelope
+                        input(type='text' placeholder='john@email.com')
+                        button(type='submit') SUBSCRIBE
+                // slider-content
+        // row
+    // container
+// ====== CALL TO ACTION PART ENDS ======
+// ====== CONTACT PART START ======
+section#contact.contact-area
+    .container
+        .row.justify-content-center
+            .col-lg-6
+                .section-title.text-center.pb-10
+                    h4.title Get In touch
+                    p.text
+                        | Stop wasting time and money designing and managing a website that doesn&rsquo;t get
+                        | results. Happiness guaranteed!
+                // section title
+        // row
+        .row.justify-content-center
+            .col-lg-8
+                .contact-form
+                    form#contact-form(method='post' data-toggle='validator')
+                        .row
+                            .col-md-6
+                                .single-form.form-group
+                                    input(type='text' name='name' placeholder='Your Name' data-error='Name is required.' required='required')
+                                    .help-block.with-errors
+                                // single form
+                            .col-md-6
+                                .single-form.form-group
+                                    input(type='email' name='email' placeholder='Your Email' data-error='Valid email is required.' required='required')
+                                    .help-block.with-errors
+                                // single form
+                            .col-md-6
+                                .single-form.form-group
+                                    input(type='text' name='subject' placeholder='Subject' data-error='Subject is required.' required='required')
+                                    .help-block.with-errors
+                                // single form
+                            .col-md-6
+                                .single-form.form-group
+                                    input(type='text' name='phone' placeholder='Phone' data-error='Phone is required.' required='required')
+                                    .help-block.with-errors
+                                // single form
+                            .col-md-12
+                                .single-form.form-group
+                                    textarea(placeholder='Your Mesaage' name='message' data-error='Please, leave us a message.' required='required')
+                                    .help-block.with-errors
+                                // single form
+                            p.form-message
+                            .col-md-12
+                                .single-form.form-group.text-center
+                                    button.main-btn(type='submit') send message
+                                // single form
+                        // row
+                // row
+        // row
+    // conteiner
+// ====== CONTACT PART ENDS ======
+// ====== FOOTER PART START ======
+footer#footer.footer-area
+    .footer-widget
+        .container
+            .row
+                .col-lg-12
+                    .footer-logo-support.d-md-flex.align-items-end.justify-content-between
+                        .footer-logo.d-flex.align-items-end
+                            a.mt-30(href='index.html')
+                                img(src='assets/images/logo.svg' alt='Logo')
+                            ul.social.mt-30
+                                li
+                                    a(href='#')
+                                        i.lni-facebook-filled
+                                li
+                                    a(href='#')
+                                        i.lni-twitter-original
+                                li
+                                    a(href='#')
+                                        i.lni-instagram-original
+                                li
+                                    a(href='#')
+                                        i.lni-linkedin-original
+                        // footer logo
+                    // footer logo support
+            // row
+            .row
+                .col-lg-2.col-md-4.col-sm-6
+                    .footer-link
+                        h6.footer-title Company
+                        ul
+                            li
+                                a(href='#') About
+                            li
+                                a(href='#') Contact
+                            li
+                                a(href='#') Career
+                    // footer link
+                .col-lg-3.col-md-4.col-sm-6
+                    .footer-link
+                        h6.footer-title Product &amp; Services
+                        ul
+                            li
+                                a(href='#') Products
+                            li
+                                a(href='#') Business
+                            li
+                                a(href='#') Developer
+                    // footer link
+                .col-lg-3.col-md-4.col-sm-5
+                    .footer-link
+                        h6.footer-title Help &amp; Suuport
+                        ul
+                            li
+                                a(href='#') Support Center
+                            li
+                                a(href='#') FAQ
+                            li
+                                a(href='#') Terms &amp; Conditions
+                    // footer link
+                .col-lg-4.col-md-6.col-sm-7
+                    .footer-newsletter
+                        h6.footer-title Subscribe Newsletter
+                        .newsletter
+                            form(action='#')
+                                input(type='text' placeholder='Your Email')
+                                button(type='submit')
+                                    i.lni-angle-double-right
+                        p.text Subscribe weekly newsletter to stay upto date. We don&rsquo;t send spam.
+                    // footer newsletter
+            // row
+        // container
+    // footer widget
+    .footer-copyright
+        .container
+            .row
+                .col-lg-12
+                    .copyright.text-center
+                        p.text
+                            | Template Crafted by
+                            a(rel='nofollow' href='https://uideck.com') UIdeck
+                            |  -
+                            |                                 UI Powered by
+                            a(el='nofollow' href='https://rebrand.ly/ayroui') AyroUI
+            // row
+        // container
+    // footer copyright
+// ====== FOOTER PART ENDS ======
+// ====== BACK TO TOP PART START ======
+a.back-to-top(href='#')
+    i.lni-chevron-up
+// ====== BACK TO TOP PART ENDS ======
+// ====== jquery js ======
+script(src='assets/js/vendor/modernizr-3.6.0.min.js')
+script(src='assets/js/vendor/jquery-1.12.4.min.js')
+// ====== Bootstrap js ======
+script(src='assets/js/bootstrap.min.js')
+script(src='assets/js/popper.min.js')
+// ====== Scrolling Nav js ======
+script(src='assets/js/jquery.easing.min.js')
+script(src='assets/js/scrolling-nav.js')
+// ====== Magnific Popup js ======
+script(src='assets/js/jquery.magnific-popup.min.js')
+// ====== Main js ======
+script(src='assets/js/main.js')
+script.
+    !{personalizationJs}
+    function sendGetInTouchEvent() {
+        console.log('sending xdm event')
+        alloy('sendEvent', {
+                xdm: {
+                    identityMap: {
+                        CGID: [
+                            {
+                                id: '#{cgid}',
+                                primary: true
+                            }
+                        ]
+                    },
+                    web: {
+                        webInteraction: {
+                            linkClicks: {
+                                id: 1,
+                                value: 1
+                            }
+                        }
+                    },
+                    timestamp: (new Date()).toISOString()
+                }
+        }).then(function(result) {
+
+            // this doesn't log the activation handle
+            console.log("xdm event result: ", result);
+        })
+
+    }
+
+

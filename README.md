@@ -88,6 +88,11 @@ In order to use a proxy you need to set `PROXY_HOST` and `PROXY_PORT` in your `.
 **!IMPORTANT!**: Because the demo is running in a docker container, you need to use `host.docker.internal` instead
 of `localhost` to point to your machine.
 
+```dotenv
+PROXY_HOST="host.docker.internal"
+PROXY_PORT="8888
+```
+
 # Troubleshooting the demo
 
 In order to see the output of the container and debug any errors, run the 

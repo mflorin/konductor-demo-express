@@ -91,7 +91,7 @@ of `localhost` to point to your machine.
 
 ```dotenv
 PROXY_HOST="host.docker.internal"
-PROXY_PORT="8888
+PROXY_PORT=8888
 ```
 
 # Troubleshooting the demo

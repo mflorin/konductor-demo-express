@@ -7,7 +7,7 @@ integration with the Konductor API.
 
 - Docker (https://www.docker.com/)
 - Access to Adobe Developer Console
-- A valid datastream setup in Adobe Lunch with Adobe Target enabled
+- A valid datastream setup in Adobe Lunch
 
 # Setup
 
@@ -62,13 +62,14 @@ when you've creted the project in the Adobe Developer Console
 
 # Adobe Target Content Personalization
 
-1. Create an Adobe Target Activity
-2. Edit the Activity
-3. Configure Page Delivery (click the gear icon) to use the URL: `https://mybusiness.com`
-4. Edit the Page name to be: `Homepage`
-5. Save the activity
-6. Copy the `Activity ID` found in the `Overview` tab
-7. Fill in the `PERSONALIZATION_ACTIVITY_ID` in the `.env` file with the value of your `Activity ID`
+1. Enable Adobe Target on your Datastream in Adobe Launch
+2. Create an Adobe Target Activity
+3. Edit the Activity
+4. Configure Page Delivery (click the gear icon) to use the URL: `https://mybusiness.com`
+5. Edit the Page name to be: `Homepage`
+6. Save the activity
+7. Copy the `Activity ID` found in the `Overview` tab
+8. Fill in the `PERSONALIZATION_ACTIVITY_ID` in the `.env` file with the value of your `Activity ID`
 
 # Running the demo
 

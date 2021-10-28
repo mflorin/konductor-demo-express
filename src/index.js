@@ -24,9 +24,6 @@ if (process.env['SERVER_PORT'] !== undefined) {
 }
 
 /* personalization activity id used to fetch personalized content from Adobe Target */
-if (process.env['PERSONALIZATION_ACTIVITY_ID'] === undefined) {
-    throw new Error('PERSONALIZATION_ACTIVITY_ID env var is missing')
-}
 const personalizationActivityId = process.env['PERSONALIZATION_ACTIVITY_ID']
 
 /* validate server certificates configuration */
@@ -116,13 +113,16 @@ app.get('/', async (req, res) => {
     const cgid = utils.cookie.getOrSetCookie(req, res)
 
     let personalizationJs = ''
-    try {
-        const personalization = await konductor.personalize(cgid, personalizationActivityId)
-        for (const p of personalization) {
-            personalizationJs += `$("${p.selector}").html("${p.content}");`
+    if (personalizationActivityId !== undefined) {
+        try {
+
+            const personalization = await konductor.personalize(cgid, personalizationActivityId)
+            for (const p of personalization) {
+                personalizationJs += `$("${p.selector}").html("${p.content}");`
+            }
+        } catch (err) {
+            console.log(err)
         }
-    } catch (err) {
-        console.log(err)
     }
 
     res.render('index', {personalizationJs, konductorConfig, cgid})

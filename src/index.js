@@ -53,10 +53,18 @@ process.on('SIGINT', () => {
 /* do this to be able to proxy through Charles which terminates SSL with a self signed certificate */
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 
+let proxy
+if (process.env['PROXY_HOST'] !== undefined && process.env['PROXY_PORT'] !== undefined) {
+    proxy = {
+        host: process.env['PROXY_HOST'],
+        port: process.env['PROXY_PORT']
+    }
+}
+
 /* setup IMS config */
 const imsConfig = {
     host: process.env['IMS_HOST'] || 'https://ims-na1.adobelogin.com',
-    proxyHost: process.env['IMS_PROXY_HOST'],
+    proxy,
     imsOrg: process.env['IMS_ORG'],
     technicalAccountId: process.env['IMS_TECHNICAL_ACCOUNT_ID'],
     apiKey: process.env['IMS_CLIENT_ID'],
@@ -71,6 +79,7 @@ const ims = new Ims(imsConfig)
 /* konductor config */
 const konductorConfig = {
     ims,
+    proxy,
     host: process.env['KONDUCTOR_HOST'] || 'https://server.adobedc.net',
     dataStreamId: process.env['DATASTREAM_ID'],
     siteName: process.env['SITE_URL'] || 'https://mybusiness.com',

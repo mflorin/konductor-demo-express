@@ -38,6 +38,10 @@ Konductor.prototype.run = async function(method, path, headers, params, data) {
         rejectUnauthorized: false
     }
 
+    if (this.config.proxy !== undefined) {
+        axiosConfig.proxy = this.config.proxy
+    }
+
     if (['post', 'put', 'patch'].includes(method.toLowerCase()) && data !== undefined) {
         axiosConfig.data = data
     }

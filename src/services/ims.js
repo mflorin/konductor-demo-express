@@ -74,9 +74,14 @@ Ims.prototype.fetchAccessToken = async function() {
     formData.append('client_secret', this.config.clientSecret);
     formData.append('jwt_token', jwt)
 
-    const res = await axios.post(`${this.config.proxyHost || this.config.host}/ims/exchange/jwt`, formData, {
+    const axiosConfig = {
         headers: formData.getHeaders()
-    })
+    }
+
+    if (this.config.proxy !== undefined) {
+        axiosConfig.proxy = this.config.proxy
+    }
+    const res = await axios.post(`${this.config.host}/ims/exchange/jwt`, formData, axiosConfig)
 
     /* validate ims response */
     if (res.data.access_token === undefined) {

@@ -81,6 +81,13 @@ This will build and launch a docker container with your app.
 
 Access the demo in your browser by visiting https://mybusiness.com .
 
+# Running through a proxy
+
+In order to use a proxy you need to set `PROXY_HOST` and `PROXY_PORT` in your `.env` file to point to your proxy configuration.
+
+**!IMPORTANT!**: Because the demo is running in a docker container, you need to use `host.docker.internal` instead
+of `localhost` to point to your machine.
+
 # Troubleshooting the demo
 
 In order to see the output of the container and debug any errors, run the 

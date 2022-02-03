@@ -80,7 +80,8 @@ const konductorConfig = {
     host: process.env['KONDUCTOR_HOST'] || 'https://server.adobedc.net',
     dataStreamId: process.env['DATASTREAM_ID'],
     siteName: process.env['SITE_URL'] || 'https://mybusiness.com',
-    personalizationPageName: process.env['PERSONALIZATION_PAGE_NAME'] || 'Homepage'
+    personalizationPageName: process.env['PERSONALIZATION_PAGE_NAME'] || 'Homepage',
+    debugSessionId: process.env['GRIFFON_ID']
 }
 
 /* create konductor service object */

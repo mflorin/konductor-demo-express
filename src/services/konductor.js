@@ -27,12 +27,20 @@ Konductor.prototype.run = async function(method, path, headers, params, data) {
         ...headers
     }
 
+    const defaultParams = {
+        dataStreamId: this.config.dataStreamId
+    }
+
+    if (this.config.debugSessionId != null) {
+        defaultParams.debugSessionId = this.config.debugSessionId
+    }
+
     const axiosConfig = {
         method,
         headers: requestHeaders,
         url: `${this.config.host}/${path}`,
         params: {
-            'dataStreamId': this.config.dataStreamId,
+            ...defaultParams,
             ...params
         },
         rejectUnauthorized: false
@@ -49,7 +57,6 @@ Konductor.prototype.run = async function(method, path, headers, params, data) {
     return axios(axiosConfig)
 
 }
-
 
 Konductor.prototype.personalize = async function(cgid, activityId) {
     const payload = {

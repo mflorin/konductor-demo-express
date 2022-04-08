@@ -58,7 +58,7 @@ Konductor.prototype.run = async function(method, path, headers, params, data) {
 
 }
 
-Konductor.prototype.personalize = async function(cgid, activityId) {
+Konductor.prototype.personalize = async function(fpid, activityId) {
     const payload = {
         "query": {
             "personalization": {
@@ -76,9 +76,9 @@ Konductor.prototype.personalize = async function(cgid, activityId) {
         "event": {
             "xdm": {
                 "identityMap": {
-                    "CGID": [
+                    "FPID": [
                         {
-                            "id": cgid,
+                            "id": fpid,
                             "primary": true
                         }
                     ]

@@ -1,18 +1,25 @@
-# Introduction
+# Konductor Demo Express
 
 This is a minimalistic NodeJS express web app that demonstrates server-side 
 integration with the Konductor API.
 
-# Prerequisites
+## Goals
+
+The app provides a server side rendered front-end and acts as a server that sends data collection and
+personalization requests to konductor.
+
+## Installation
+
+### Prerequisites
 
 - Docker (https://www.docker.com/)
 - Access to Adobe Developer Console
 - A valid datastream setup in Adobe Lunch
 
-# Setup
+### Setup
 
 1. Clone the project
-    ```
+    ```shell
     $ git clone git@github.com:mflorin/konductor-demo-express.git
     ```
 2. Add an entry in your hosts file to have `mybusiness.com` point to `127.0.0.1`
@@ -20,7 +27,7 @@ integration with the Konductor API.
     $ sudo vim /etc/hosts
     ```
 3. Create an `.env` file by copying the `env.template` file
-    ```
+    ```shell
     $ cd konductor-demo-express
     $ cp env.template .env
     ```
@@ -60,7 +67,7 @@ Open your project, select `Service Account(JWT)` in the left menu and click the 
 The private key file is the one found in the configuration archive you've downloaded
 when you've creted the project in the Adobe Developer Console
 
-# Adobe Target Content Personalization
+### Adobe Target Content Personalization
 
 1. Enable Adobe Target on your Datastream in Adobe Launch
 2. Create an Adobe Target Activity
@@ -71,7 +78,7 @@ when you've creted the project in the Adobe Developer Console
 7. Copy the `Activity ID` found in the `Overview` tab
 8. Fill in the `PERSONALIZATION_ACTIVITY_ID` in the `.env` file with the value of your `Activity ID`
 
-# Running the demo
+## Usage
 
 Use the `demo.sh` script provided with the source code to run the demo.
 ```shell
@@ -82,7 +89,7 @@ This will build and launch a docker container with your app.
 
 Access the demo in your browser by visiting https://mybusiness.com .
 
-# Running through a proxy
+### Running through a proxy
 
 In order to use a proxy you need to set `PROXY_HOST` and `PROXY_PORT` in your `.env` file to point to your proxy configuration.
 
@@ -94,7 +101,7 @@ PROXY_HOST="host.docker.internal"
 PROXY_PORT=8888
 ```
 
-# Troubleshooting the demo
+### Troubleshooting the demo
 
 In order to see the output of the container and debug any errors, run the 
 `demo.sh` script with the `-d` parameter like this:
@@ -103,9 +110,9 @@ In order to see the output of the container and debug any errors, run the
 $ ./demo.sh -d
 ```
 
-## Common errors
+### Common errors
 
-### Browser rejects the certificate
+#### Browser rejects the certificate
 
 Most of the time you can instruct the browser to move on (usually in the `Advanced` section of the warning window)
 
@@ -114,12 +121,12 @@ The reason could be one of the following:
 - you've regenerated the certificates and used in invalid fqdn
 - you've regenerated the certificates and didn't use the correct domain name
 
-### Docker container already exists
+#### Docker container already exists
 
 - check if the container stopped correctly `docker ps -a`
 - manually remove any leftover containers `docker rm -f konductor-demo-express` or run `./demo.sh stop`
 
-# Stopping the demo
+### Stopping the demo
 
 Run
 ```shell
@@ -132,24 +139,32 @@ or manually stop the `konductor-demo-express` docker container:
 docker rm -f konductor-demo-express
 ```
 
-# Changing the domain you're running the demo on
+### Changing the domain you're running the demo on
 
 In order to change the domain you need to do the following:
 
-## Regenerate the server certificates
+#### Regenerate the server certificates
 
-First you need to edit `v3.ext` and change `DNS.1` and `DNS.2` to point to your desired domain name.
+First you need to edit `certs/v3.ext` and change `DNS.1` and `DNS.2` to point to your desired domain name.
 Then you need to run `./gen-certs.sh` from the `certs` folder and fill in the form with valid data.
 
-## Update the `SERVER_KEY_PASSPHRASE`
+#### Update the `SERVER_KEY_PASSPHRASE`
 
 Update the `.env` file and put the new password you've used when recreating the certificates into
 the `SERVER_KEY_PASSPHRASE` env var.
 
-## Change `SITE_URL` in `.env`
+#### Change `SITE_URL` in `.env`
 
 Edit `.env` and change `SITE_URL`
 
-## Edit the Adobe Target Activity
+#### Edit the Adobe Target Activity
 
 Go to Adobe Target, edit your activity and change `Page Delivery` to have the URL point to your new domain.
+
+## Contributing
+
+Contributions are welcomed! Read the [Contributing Guide](./.github/CONTRIBUTING.md) for more information.
+
+## Licensing
+
+This project is licensed under the Apache V2 License. See [LICENSE](LICENSE) for more information.

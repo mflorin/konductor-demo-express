@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 const uuid = require('uuid')
 
-const cookieName = 'CGID'
+const cookieName = 'FPID'
 const cookieOptions = {
     httpOnly: true,
     sameSite: 'lax',
@@ -21,16 +21,16 @@ const cookieOptions = {
 
 module.exports = {
     getOrSetCookie: (req, res) => {
-        let cgid
+        let fpid
         if (req.cookies[cookieName] === undefined) {
-            cgid = uuid.v4()
-            console.log(`creating CGID: ${cgid}`)
-            res.cookie(cookieName, cgid, cookieOptions)
+            fpid = uuid.v4()
+            console.log(`creating FPID: ${fpid}`)
+            res.cookie(cookieName, fpid, cookieOptions)
         } else {
-            cgid = req.cookies[cookieName]
-            console.log(`reusing CGID ${cgid}`)
+            fpid = req.cookies[cookieName]
+            console.log(`reusing FPID ${fpid}`)
         }
 
-        return cgid
+        return fpid
     }
 }

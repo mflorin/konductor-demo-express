@@ -122,14 +122,14 @@ app.use(bodyParser.text())
 /* main route */
 app.get('/', async (req, res) => {
 
-    /* get the cgid cookie or create it if absent */
-    const cgid = utils.cookie.getOrSetCookie(req, res)
+    /* get the fpid cookie or create it if absent */
+    const fpid = utils.cookie.getOrSetCookie(req, res)
 
     let personalizationJs = ''
     if (personalizationActivityId !== undefined) {
         try {
 
-            const personalization = await konductor.personalize(cgid, personalizationActivityId)
+            const personalization = await konductor.personalize(fpid, personalizationActivityId)
             for (const p of personalization) {
                 personalizationJs += `$("${p.selector}").html("${p.content}");`
             }
@@ -138,7 +138,7 @@ app.get('/', async (req, res) => {
         }
     }
 
-    res.render('index', {personalizationJs, konductorConfig, cgid})
+    res.render('index', {personalizationJs, konductorConfig, fpid})
 })
 
 /* https server startup */
